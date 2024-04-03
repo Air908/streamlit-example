@@ -90,3 +90,52 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("<h1 class='gradient-text'>Chatbot Interface</h1>", unsafe_allow_html=True)
+st.markdown("""
+.gradient-text {
+  background-image: linear-gradient(to right, #f3ec78, #af4261); /* Adjust colors and direction */
+  color: transparent;  /* Make text color transparent */
+  -webkit-background-clip: text;  /* Clip background to text (WebKit browsers) */
+  background-clip: text;         /* Clip background to text (modern browsers) */
+  text-fill-color: transparent;  /* Make text inherit gradient color (WebKit browsers) */
+}
+
+<style>
+    .stButton {
+        position: relative;  /* Needed for pseudo-element positioning */
+    }
+
+    .stButton>button:hover {
+        font-weight:bold;
+        border:none;
+        color: #000000;
+        background: linear-gradient(to right, #009688 , #77a69a ,#9F00FF );  /* Base button color */
+    }
+
+    .stButton>button:after {
+        content: "";
+        position: absolute;
+        insert: 0;  /* Inset property for shorthand positioning */
+        border:none;
+        border-radius: inherit;
+        background: linear-gradient(to right, #009688 0%, #77a69a 0%,#9F00FF 90%);
+        opacity: 0;  /* Initially hidden */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .stButton>button:active,
+    .stButton>button:focus {
+        outline: none; /* Remove default button outline */
+    }
+
+    .stButton>button:hover:after {
+        color:#000000;
+        opacity: 1; /* Show gradient border on hover */
+    }
+    .stTextArea:hover,
+    .stTextInput:hover,
+    .stSelectbox:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
+""", unsafe_allow_html=True)
