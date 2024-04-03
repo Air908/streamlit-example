@@ -64,7 +64,7 @@ if not st.session_state["logged_in"]:
 if st.session_state["logged_in"]:
     # Chat interface elements
     with st.form(key='chat_form'):
-        user_input = st.text_input("You:", "", help="Type your message here...", key="user_input")
+        user_input = st.text_input("Input:", "", help="Type your message here...", key="user_input")
         submit_button = st.form_submit_button(label='Send')
 
         if user_input.strip() != "" and submit_button:
