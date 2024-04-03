@@ -64,7 +64,7 @@ if not st.session_state["logged_in"]:
 if st.session_state["logged_in"]:
     # Chat interface elements
     with st.form(key='chat_form'):
-        user_input = st.text_input("Input:", "", help="Type your message here...", key="user_input")
+        user_input = st.text_input("You:", "", help="Type your message here...", key="user_input")
         submit_button = st.form_submit_button(label='Send')
 
         if user_input.strip() != "" and submit_button:
@@ -79,7 +79,18 @@ if st.session_state["logged_in"]:
         st.sidebar.text_area(f"{sender}:", message, height=len(message) // 2 + 1, max_chars=len(message))
 
 # Gradient text effect for title
-st.markdown("<h1 class='gradient-text'>Chatbot Interface</h1>", unsafe_allow_html=True
+st.markdown("""
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, red, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+st.markdown("<h1 class='gradient-text'>Chatbot Interface</h1>", unsafe_allow_html=True)
+st.markdown("""
 .gradient-text {
   background-image: linear-gradient(to right, #f3ec78, #af4261); /* Adjust colors and direction */
   color: transparent;  /* Make text color transparent */
