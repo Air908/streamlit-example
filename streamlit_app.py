@@ -89,8 +89,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='gradient-text'>Chatbot Interface</h1>", unsafe_allow_html=True)
-st.markdown("""
+st.markdown("<h1 class='gradient-text'>Chatbot Interface</h1>", unsafe_allow_html=True
 .gradient-text {
   background-image: linear-gradient(to right, #f3ec78, #af4261); /* Adjust colors and direction */
   color: transparent;  /* Make text color transparent */
