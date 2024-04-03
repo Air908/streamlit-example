@@ -79,16 +79,6 @@ if st.session_state["logged_in"]:
         st.sidebar.text_area(f"{sender}:", message, height=len(message) // 2 + 1, max_chars=len(message))
 
 # Gradient text effect for title
-st.markdown("""
-    <style>
-        .gradient-text {
-            background: linear-gradient(45deg, red, blue);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 st.markdown("<h1 class='gradient-text'>Chatbot Interface</h1>", unsafe_allow_html=True
 .gradient-text {
   background-image: linear-gradient(to right, #f3ec78, #af4261); /* Adjust colors and direction */
